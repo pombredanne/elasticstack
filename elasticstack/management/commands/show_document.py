@@ -15,10 +15,10 @@ class Command(BaseCommand):
 
     option_list = BaseCommand.option_list + (
         make_option('--using',
-            action='store_true',
+            action='store',
             dest='using',
             default='default',
-            help='Delete poll instead of closing it'),
+            help='The Haystack backend to use'),
         )
 
     def handle(self, *args, **options):
